@@ -193,15 +193,63 @@ public:
 
 };
 
+class clsDeveloper : public clsEmployee
+{
 
+private:
+    string _MainProgrammingLanguage;
+
+public:
+    clsDeveloper(int ID, string FirstName, string LastName, string Email, string Phone, string Title, string Department, float Salary, string MainProgrammingLanguage)
+        : clsEmployee(ID, FirstName, LastName, Email, Phone, Title, Department, Salary)
+    {
+        _MainProgrammingLanguage = MainProgrammingLanguage;
+    }
+
+    //Property Set
+    void setMainProgrammingLanguage(string MainProgrammingLanguage)
+    {
+        _MainProgrammingLanguage = MainProgrammingLanguage;
+    }
+
+    //Property Get
+    string MainProgrammingLanguage()
+    {
+        return _MainProgrammingLanguage;
+    }
+
+
+    void Print()
+    {
+
+        cout << "\nInfo:";
+        cout << "\n____________________________________________";
+        cout << "\nID                     : " << ID();
+        cout << "\nFirstName              : " << FirstName();
+        cout << "\nLastName               : " << LastName();
+        cout << "\nFull Name              : " << FullName();
+        cout << "\nEmail                  : " << Email();
+        cout << "\nPhone                  : " << Phone();
+
+        cout << "\nTitle                  : " << Title();
+        cout << "\nDepartment             : " << Department();
+        cout << "\nSalary                 : " << Salary();
+
+        cout << "\nMainProgrammingLanguage: " << MainProgrammingLanguage();
+
+        cout << "\n____________________________________________\n";
+
+    }
+
+};
 
 int main()
 
 {
 
-    clsEmployee Employee1(10, "Mohammed", "Almomany", "A@a.com", "8298982", "Med-Engineer", "Engineering", 3000);
+    clsDeveloper Developer(10, "Mohammed", "Almomany", "A@a.com", "8298982", "Med-Engineer", "Engineering", 3000, "C++");
 
-    Employee1.Print();
+    Developer.Print();
 
 
     system("pause>0");
