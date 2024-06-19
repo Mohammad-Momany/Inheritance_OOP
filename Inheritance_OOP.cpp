@@ -82,7 +82,8 @@ public:
         return _FirstName + " " + _LastName;
     }
 
-    void Print()
+
+    virtual void Print()
     {
         cout << "\nInfo:";
         cout << "\n___________________";
