@@ -129,6 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Inheritance_OOP.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clsDeveloper.h" />
+    <ClInclude Include="clsEmployee.h" />
+    <ClInclude Include="clsPerson.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
